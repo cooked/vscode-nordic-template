@@ -8,7 +8,7 @@
     "context": "../",
     
     // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-    // ...note that the user shall exist (or be created) in the container
+    // User shall exist in the container
     //"remoteUser": "root",
 
     // The optional 'runArgs' property can be used to specify additional runtime arguments.
@@ -30,9 +30,15 @@
         // Configure properties specific to VS Code.
         "vscode": {
             "settings": {
+                // core
                 "terminal.integrated.defaultProfile.linux": "bash",
+                // nordic
+                "nrf-connect.toolchain.path": "PATH"
             },
             "extensions": [
+                // core
+                "ms-vscode.cmake-tools",
+                "ms-azuretools.vscode-docker",
                 // nordic
                 "nordic-semiconductor.nrf-connect",
                 "nordic-semiconductor.nrf-devicetree",
